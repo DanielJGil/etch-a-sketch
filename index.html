@@ -19,10 +19,11 @@
       <div class="left">
         <button class="black">BLACK</button>
         <button class="rainbow">RAINBOW</button>
-        <button class="eraser">ERASER</button>
+        <button class="greyscale">GREYSCALE</button>
       </div>
       <div class="container"></div>
       <div class="right">
+        <button class="eraser">ERASER</button>
         <button class="clear">CLEAR</button>
         <div class="range">
           <label for="slider" class="label">PIXEL SIZE</label>
@@ -30,7 +31,7 @@
             type="range"
             value="16"
             min="1"
-            max="100"
+            max="30"
             oninput="this.nextElementSibling.value = this.value"
             name="slider"
             id="slider"
