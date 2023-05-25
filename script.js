@@ -13,7 +13,26 @@ function hoverColor() {
   let items = document.querySelectorAll(".box");
   items.forEach((item) => {
     item.addEventListener("mouseover", () => {
-      item.style.backgroundColor = "black";
+      item.classList.add("color");
     });
   });
 }
+
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", () => {
+  let items = document.querySelectorAll(".box");
+  items.forEach((item) => {
+    item.classList.remove("color");
+  });
+});
+
+// ERASER
+// const clearBtn = document.querySelector(".clear");
+// clearBtn.addEventListener("click", () => {
+//   let items = document.querySelectorAll(".box");
+//   items.forEach((item) => {
+//     item.addEventListener("mouseover", () => {
+//       item.classList.toggle("color");
+//     });
+//   });
+// });
