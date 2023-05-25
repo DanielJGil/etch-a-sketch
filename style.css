@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/pink.jpg);
+  display: flex;
+  /* justify-content: center; */
+}
+
+.container {
+  border: solid black 2px;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(16, auto);
+}
+
+.container > div {
+  border: solid black 1px;
+  width: 25px;
+  height: 25px;
+}
+
+/* .color {
+  background-color: black;
+} */
