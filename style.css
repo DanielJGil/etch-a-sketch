@@ -90,6 +90,27 @@ body {
   scale: 95%;
 }
 
+.eraser {
+  padding: 10px 30px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 70px;
+  transition: 0.25s;
+}
+
+.eraser:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 0.25s;
+}
+
+.eraser:active {
+  scale: 95%;
+}
+
 .right {
   flex: 1;
   display: flex;
