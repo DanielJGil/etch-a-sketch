@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="header">ETCH-A-SKETCH</div>
+    <div class="main">
+      <div class="left">
+        <button class="black">BLACK</button>
+        <button class="rainbow">RAINBOW</button>
+      </div>
+      <div class="container"></div>
+      <div class="right">
+        <button class="clear">CLEAR</button>
+        <div class="range">
+          <label for="slider" class="label">PIXEL SIZE</label>
+          <input
+            type="range"
+            value="16"
+            min="1"
+            max="100"
+            oninput="this.nextElementSibling.value = this.value"
+            name="slider"
+            id="slider"
+            class="slider"
+          />
+          <output>16</output>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
