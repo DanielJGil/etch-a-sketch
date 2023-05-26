@@ -8,7 +8,7 @@ for (let i = 1; i <= squares ** 2; i++) {
   gridBox.classList.add("box");
   container.appendChild(gridBox);
 
-  blackColor();
+  greyScale();
 }
 
 slider.addEventListener("change", () => {
@@ -96,6 +96,22 @@ rainbow.addEventListener("click", () => {
     }
   });
 });
+
+// FUNCTION TO CREATE GREYSCALE EFFECT
+function greyScale() {
+  let items = document.querySelectorAll(".box");
+  items.forEach((item) => {
+    let x = 0;
+    item.addEventListener("mouseover", () => {
+      if (x < 1) {
+        x += 0.1;
+        console.log(x);
+      }
+
+      item.style.backgroundColor = `rgb(0, 0, 0, ${x})`;
+    });
+  });
+}
 
 // CLEAR BUTTON
 const clearBtn = document.querySelector(".clear");
