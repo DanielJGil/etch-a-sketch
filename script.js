@@ -8,7 +8,7 @@ for (let i = 1; i <= squares ** 2; i++) {
   gridBox.classList.add("box");
   container.appendChild(gridBox);
 
-  greyScale();
+  blackColor();
 }
 
 slider.addEventListener("change", () => {
@@ -97,8 +97,8 @@ rainbow.addEventListener("click", () => {
   });
 });
 
-// FUNCTION TO CREATE GREYSCALE EFFECT
-function greyScale() {
+// FUNCTION TO CREATE GRAYSCALE EFFECT
+function grayScale() {
   let items = document.querySelectorAll(".box");
   items.forEach((item) => {
     let x = 0;
@@ -107,11 +107,33 @@ function greyScale() {
         x += 0.1;
         console.log(x);
       }
-
       item.style.backgroundColor = `rgb(0, 0, 0, ${x})`;
     });
   });
 }
+
+// GRAYSCALE BUTTON
+const grayscale = document.querySelector(".grayscale");
+grayscale.addEventListener("click", () => {
+  grayScale();
+
+  slider.addEventListener("change", () => {
+    let squares = slider.value;
+
+    container.innerHTML = "";
+
+    container.style.gridTemplateRows = `repeat(${squares}, 1fr )`;
+    container.style.gridTemplateColumns = `repeat(${squares}, 1fr)`;
+
+    for (let i = 1; i <= squares ** 2; i++) {
+      let gridBox = document.createElement("div");
+      gridBox.classList.add("box");
+      container.appendChild(gridBox);
+
+      grayScale();
+    }
+  });
+});
 
 // CLEAR BUTTON
 const clearBtn = document.querySelector(".clear");

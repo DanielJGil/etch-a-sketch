@@ -106,7 +106,7 @@ body {
   scale: 95%;
 }
 
-.greyscale {
+.grayscale {
   padding: 10px 30px;
   background: none;
   border: none;
@@ -117,13 +117,13 @@ body {
   transition: 0.25s;
 }
 
-.greyscale:hover {
+.grayscale:hover {
   cursor: pointer;
   transform: translateY(-5px);
   transition: 0.25s;
 }
 
-.greyscale:active {
+.grayscale:active {
   scale: 95%;
 }
 
