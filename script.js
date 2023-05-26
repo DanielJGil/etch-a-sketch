@@ -7,9 +7,8 @@ for (let i = 1; i <= squares ** 2; i++) {
   let gridBox = document.createElement("div");
   gridBox.classList.add("box");
   container.appendChild(gridBox);
-
-  blackColor();
 }
+blackColor();
 
 slider.addEventListener("change", () => {
   let squares = slider.value;
@@ -23,9 +22,8 @@ slider.addEventListener("change", () => {
     let gridBox = document.createElement("div");
     gridBox.classList.add("box");
     container.appendChild(gridBox);
-
-    blackColor();
   }
+  blackColor();
 });
 
 // FUNCTION TO MAKE SQUARES BLACK
@@ -55,9 +53,8 @@ black.addEventListener("click", () => {
       let gridBox = document.createElement("div");
       gridBox.classList.add("box");
       container.appendChild(gridBox);
-
-      blackColor();
     }
+    blackColor();
   });
 });
 
@@ -91,9 +88,8 @@ rainbow.addEventListener("click", () => {
       let gridBox = document.createElement("div");
       gridBox.classList.add("box");
       container.appendChild(gridBox);
-
-      rainbowColor();
     }
+    rainbowColor();
   });
 });
 
@@ -129,9 +125,8 @@ grayscale.addEventListener("click", () => {
       let gridBox = document.createElement("div");
       gridBox.classList.add("box");
       container.appendChild(gridBox);
-
-      grayScale();
     }
+    grayScale();
   });
 });
 
